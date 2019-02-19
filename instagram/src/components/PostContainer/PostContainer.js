@@ -5,7 +5,11 @@ import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = props => {
     return (
-        <CommentSection />
+        <div>
+            {props.comments.map(comment => (
+                <CommentSection comment={comment} />
+            ))}
+        </div>
     );
 }
 
