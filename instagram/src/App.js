@@ -9,13 +9,12 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      username: '',
-      thumbnailUrl: '',
-      imageUrl: '',
-      likes: 0,
-      timestamp: '',
-      comments: []
+      dummyData: []
     }
+  }
+
+  componentDidMount() {
+    this.setState({ dummyData: dummyData });
   }
 
   render() {
@@ -23,8 +22,10 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <SearchBar />
-          <PostContainer />
         </header>
+        <body>
+          <PostContainer dummyData={this.state.dummyData} />
+        </body>
       </div>
     );
   }
