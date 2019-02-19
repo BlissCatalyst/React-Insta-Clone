@@ -13,6 +13,9 @@ const PostContainer = props => {
                     <img src={props.post.imageUrl} alt="DummyData Post" />
                 </div>
                 <div>
+                    <p>Heart</p><p> Bubble</p>
+                </div>
+                <div>
                     <h3>{props.post.likes} likes</h3>
                 </div>
             </section>
