@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import dummyData from './dummy-data';
+import dummyData from './dummy-data.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
 import PostContainer from './components/PostContainer/PostContainer.js';
 
@@ -23,9 +23,13 @@ class App extends Component {
         <header className="App-header">
           <SearchBar />
         </header>
-        <body>
-          <PostContainer dummyData={this.state.dummyData} />
-        </body>
+          <section>
+            {this.state.dummyData.map(post => (
+              <PostContainer 
+              key={post.username}
+              post={post} />
+            ))}
+          </section>
       </div>
     );
   }
