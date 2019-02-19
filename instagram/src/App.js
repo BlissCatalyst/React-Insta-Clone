@@ -23,7 +23,7 @@ class App extends Component {
         <header className="App-header">
           <SearchBar />
         </header>
-          <section>
+          <section className="container">
             {this.state.dummyData.map(post => (
               <PostContainer 
               key={post.username}
