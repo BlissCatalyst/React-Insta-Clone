@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import dummyData from './dummy-data.js';
-import SearchBar from './components/SearchBar/SearchBar.js';
-import PostContainer from './components/PostContainer/PostContainer.js';
+import authenticate from './authentication/authenticate/authenticate.js';
 import PostsPage from './components/PostsPage/PostsPage.js';
 
 class App extends Component {
@@ -21,10 +20,13 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Login />
         <PostsPage dummyData={this.state.dummyData} />
       </div>
     );
   }
 }
+
+const Login = authenticate(App);
 
 export default App;
