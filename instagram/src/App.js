@@ -4,6 +4,7 @@ import './App.css';
 import dummyData from './dummy-data.js';
 import SearchBar from './components/SearchBar/SearchBar.js';
 import PostContainer from './components/PostContainer/PostContainer.js';
+import PostsPage from './components/PostsPage/PostsPage.js';
 
 class App extends Component {
   constructor() {
@@ -19,17 +20,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <SearchBar />
-        </header>
-          <section className="container">
-            {this.state.dummyData.map(post => (
-              <PostContainer 
-              key={post.username}
-              post={post} />
-            ))}
-          </section>
+      <div>
+        <PostsPage dummyData={this.state.dummyData} />
       </div>
     );
   }
