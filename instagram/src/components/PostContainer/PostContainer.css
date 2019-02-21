@@ -27,3 +27,11 @@
 .under-pic {
     margin: 15px;
 }
+
+.post-interact {
+    display: flex;
+}
+
+.post-interact p {
+    margin-right: 15px;
+}

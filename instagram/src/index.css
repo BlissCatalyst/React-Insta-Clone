@@ -59,6 +59,10 @@ h2, h3, strong {
     font-weight: bold;
 }
 
+h4 {
+    color: gray;
+}
+
 p {
     margin-bottom: 10px;
 }

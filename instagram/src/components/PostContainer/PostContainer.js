@@ -14,7 +14,7 @@ const PostContainer = props => {
                 <img src={props.post.imageUrl} alt="DummyData Post" />
             </div>
             <section className="under-pic">
-                <div>
+                <div className="post-interact">
                     <p>Heart</p><p> Bubble</p>
                 </div>
                 <div>
