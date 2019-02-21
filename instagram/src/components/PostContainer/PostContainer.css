@@ -1,0 +1,29 @@
+.post-container {
+    width: 100%;
+    background-color: white;
+    border: 1px solid #E6E6E6;
+    margin-bottom: 60px;
+}
+
+.post-container .post-pic img {
+    width: 100%;
+}
+
+.post-container .user-pic {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.post-container .user-thumb .user-pic {
+    margin-right: 15px;
+}
+
+.post-container .user-thumb {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+}
+
+.under-pic {
+    margin: 15px;
+}

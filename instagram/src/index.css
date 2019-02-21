@@ -52,8 +52,13 @@ border-spacing: 0;
 
 body {
     font-family: 'Monterrat', Helvetica, sans-serif;
+    background-color: #FAFAFA;
 }
 
 h2, h3, strong {
     font-weight: bold;
+}
+
+p {
+    margin-bottom: 10px;
 }

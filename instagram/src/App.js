@@ -20,13 +20,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Login />
         <PostsPage dummyData={this.state.dummyData} />
       </div>
     );
   }
 }
-
-const Login = authenticate(App);
 
 export default App;

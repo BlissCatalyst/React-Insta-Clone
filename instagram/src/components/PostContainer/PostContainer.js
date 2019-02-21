@@ -5,31 +5,31 @@ import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = props => {
     return (
-        <div>
-            <section>
-                <img src={props.post.thumbnailUrl} alt={props.post.username} />
+        <div className="post-container">
+            <div className="user-thumb">
+                <img className="user-pic" src={props.post.thumbnailUrl} alt={props.post.username} />
                 <h2>{props.post.username}</h2>
-                <div>
-                    <img src={props.post.imageUrl} alt="DummyData Post" />
-                </div>
+            </div>
+            <div className="post-pic">
+                <img src={props.post.imageUrl} alt="DummyData Post" />
+            </div>
+            <section className="under-pic">
                 <div>
                     <p>Heart</p><p> Bubble</p>
                 </div>
                 <div>
-                    <h3>{props.post.likes} likes</h3>
+                    <p><strong>{props.post.likes} likes</strong></p>
+                </div>
+                    {props.post.comments.map((comment, index) => (
+                        <CommentSection 
+                        comment={comment}
+                        key={index}
+                        />
+                    ))}
+                <div>
+                    <h4>{props.post.timestamp}</h4>
                 </div>
             </section>
-            <section>
-                {props.post.comments.map((comment, index) => (
-                    <CommentSection 
-                    comment={comment}
-                    key={index}
-                    />
-                ))}
-            </section>
-            <div>
-                <h4>{props.post.timestamp}</h4>
-            </div>
         </div>
     );
 }
