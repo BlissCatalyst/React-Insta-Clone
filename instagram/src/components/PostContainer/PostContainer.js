@@ -4,6 +4,7 @@ import './PostContainer.css';
 import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = props => {
+
     return (
         <div className="post-container">
             <div className="user-thumb">
@@ -30,6 +31,13 @@ const PostContainer = props => {
                     <h4>{props.post.timestamp}</h4>
                 </div>
             </section>
+            <form>
+                <input 
+                type="text"
+                name="add-comment"
+                placeholder="add comment"
+                />
+            </form>
         </div>
     );
 }
